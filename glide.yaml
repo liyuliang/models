@@ -1,0 +1,3 @@
+package: queue-models
+import:
+- package: gitee.com/liyuliang/utils
