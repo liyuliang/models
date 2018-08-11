@@ -1,7 +1,7 @@
 # models
 
 #### Description
-You can use the package [structs](http://github.com/fatih/structs) to storage these models into mysql database.
+You can use the package [gorm](https://github.com/jinzhu/gorm) to storage these models into mysql database.
 If you will use these models to saving in mysql, you should add the model property description.
 
 #### Installation
