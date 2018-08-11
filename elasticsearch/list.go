@@ -1,10 +1,10 @@
-package models
+package elasticsearch
 
 type modelCreator func() model
 
 var creatorList []modelCreator
 
-func register(method modelCreator) {
+func Register(method modelCreator) {
 
 	creatorList = append(creatorList, method)
 }

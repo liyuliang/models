@@ -1,4 +1,4 @@
-package models
+package database
 
 import (
 	"testing"
@@ -11,7 +11,7 @@ func TestList(t *testing.T) {
 	l := List()
 
 	if len(l) == 0 {
-		t.Error("model list should not be empty")
+		t.Error("Model list should not be empty")
 	}
 }
 
@@ -36,13 +36,13 @@ func (model1 *model1) Name() string {
 }
 
 func TestGet(t *testing.T) {
-	register(func() model {
+	Register(func() model {
 		return new(model1)
 	})
-	register(func() model {
+	Register(func() model {
 		return new(model2)
 	})
-	register(func() model {
+	Register(func() model {
 		return new(model3)
 	})
 
@@ -52,7 +52,7 @@ func TestGet(t *testing.T) {
 		t.Error(err.Error())
 	}
 	if m.Name() != "model1" {
-		t.Error("Get model1 failed, get the " + m.Name() + " model")
+		t.Error("Get model1 failed, get the " + m.Name() + " Model")
 	}
 
 	modelName = "model2"
@@ -61,7 +61,7 @@ func TestGet(t *testing.T) {
 		t.Error(err.Error())
 	}
 	if m.Name() != modelName {
-		t.Error("Get " + modelName + " failed, get the " + m.Name() + " model")
+		t.Error("Get " + modelName + " failed, get the " + m.Name() + " Model")
 	}
 
 	modelName = "model3"
@@ -71,13 +71,13 @@ func TestGet(t *testing.T) {
 		t.Error(err.Error())
 	}
 	if m.Name() != modelName {
-		t.Error("Get " + modelName + " failed, get the " + m.Name() + " model")
+		t.Error("Get " + modelName + " failed, get the " + m.Name() + " Model")
 	}
 }
 
 func TestGetNotAPointer(t *testing.T) {
 
-	register(func() model {
+	Register(func() model {
 		return new(model1)
 	})
 

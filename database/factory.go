@@ -1,4 +1,4 @@
-package models
+package database
 
 import (
 	"strings"
@@ -16,5 +16,5 @@ func Get(modelName string) (model, error) {
 			return m, nil
 		}
 	}
-	return nil, errors.New("can not get the model by name :" + modelName)
+	return nil, errors.New("can not get the Model by name :" + modelName)
 }

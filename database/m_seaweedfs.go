@@ -1,16 +1,16 @@
-package models
+package database
 
 import (
 	"time"
 )
 
 func init() {
-	register(func() model {
-		return new(Image)
+	Register(func() model {
+		return new(Seaweedfs)
 	})
 }
 
-type Image struct {
+type Seaweedfs struct {
 	ID         uint      `gorm:"primary_key"`
 	UUid       string    `sql:"type:VARCHAR(255);index:uuid"`
 	OriHost    string    `sql:"type:VARCHAR(255);index:OriHost"`
@@ -24,7 +24,7 @@ type Image struct {
 	CreateTime time.Time `sql:"DEFAULT:current_timestamp"`
 }
 
-func (table *Image) Name() string {
+func (table *Seaweedfs) Name() string {
 	// custom table name, this is default
-	return "IMAGE"
+	return "SEAWEEDFS"
 }

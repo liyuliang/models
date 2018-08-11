@@ -1,4 +1,4 @@
-package models
+package database
 
 import (
 	"time"
@@ -7,7 +7,7 @@ import (
 )
 
 func init() {
-	register(func() model {
+	Register(func() model {
 		return new(Job)
 	})
 }
