@@ -21,6 +21,7 @@ $ glide get gitee.com/liyuliang/models
 $ wget https://github.com/google/protobuf/releases/download/v3.6.1/protoc-3.6.1-linux-x86_64.zip
 $ unzip protoc-3.6.1-linux-x86_64.zip
 ```
+
 Put the file ``bin/protoc`` into ``$GOBIN`` after unzip
 
 #### Build protoc-gen-go
@@ -29,4 +30,5 @@ $ glide get github.com/golang/protobuf/protoc-gen-go
 $ cd vendor/github.com/golang/protobuf/
 $ make && make install
 ```
+
 ``protoc-gen-go`` exe file will build in directory $GOBIN
