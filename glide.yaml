@@ -1,3 +1,8 @@
 package: queue-models
 import:
 - package: gitee.com/liyuliang/utils
+- package: github.com/golang/protobuf
+  version: ^1.1.0
+  subpackages:
+  - protoc-gen-go
+  - proto
