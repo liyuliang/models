@@ -1,5 +1,5 @@
 package protobuf
 
-type model interface {
+type Model interface {
 	String() string
 }

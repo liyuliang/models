@@ -1,5 +1,5 @@
 package database
 
-type model interface {
+type Model interface {
 	Name() string
 }

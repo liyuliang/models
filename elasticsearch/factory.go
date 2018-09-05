@@ -5,7 +5,7 @@ import (
 	"errors"
 )
 
-func Get(modelName string) (model, error) {
+func Get(modelName string) (Model, error) {
 
 	l := List()
 

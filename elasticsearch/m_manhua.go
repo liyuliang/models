@@ -3,7 +3,7 @@ package elasticsearch
 import "time"
 
 func init() {
-	Register(func() model {
+	Register(func() Model {
 		return new(Manhua)
 	})
 }

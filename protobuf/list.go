@@ -1,6 +1,6 @@
 package protobuf
 
-type modelCreator func() model
+type modelCreator func() Model
 
 var creatorList []modelCreator
 
@@ -20,7 +20,7 @@ func List() modelList {
 func init() {
 	_list = make(map[string]modelCreator)
 
-	_list["manhua"] = func() model {
+	_list["manhua"] = func() Model {
 		return new(Manhua)
 	}
 }

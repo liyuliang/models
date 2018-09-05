@@ -36,13 +36,13 @@ func (model1 *model1) Name() string {
 }
 
 func TestGet(t *testing.T) {
-	Register(func() model {
+	Register(func() Model {
 		return new(model1)
 	})
-	Register(func() model {
+	Register(func() Model {
 		return new(model2)
 	})
-	Register(func() model {
+	Register(func() Model {
 		return new(model3)
 	})
 
@@ -77,7 +77,7 @@ func TestGet(t *testing.T) {
 
 func TestGetNotAPointer(t *testing.T) {
 
-	Register(func() model {
+	Register(func() Model {
 		return new(model1)
 	})
 

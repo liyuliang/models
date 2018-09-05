@@ -1,6 +1,6 @@
 package elasticsearch
 
-type modelCreator func() model
+type modelCreator func() Model
 
 var creatorList []modelCreator
 

@@ -7,7 +7,7 @@ import (
 )
 
 func init() {
-	Register(func() model {
+	Register(func() Model {
 		return new(Job)
 	})
 }

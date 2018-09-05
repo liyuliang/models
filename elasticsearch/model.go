@@ -1,5 +1,5 @@
 package elasticsearch
 
-type model interface {
+type Model interface {
 	Name() string
 }
