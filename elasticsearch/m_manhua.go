@@ -9,7 +9,7 @@ func init() {
 type Manhua struct {
 	Id      uint64
 	Site    string
-	Number  int
+	Number  int32
 	Chapter string
 	Title   string
 	Update  string

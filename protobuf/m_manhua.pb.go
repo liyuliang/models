@@ -3,9 +3,9 @@
 
 package protobuf
 
-import "github.com/golang/protobuf/proto"
-import "fmt"
-import "math"
+import proto "github.com/golang/protobuf/proto"
+import fmt "fmt"
+import math "math"
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
@@ -21,7 +21,7 @@ const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 type Manhua struct {
 	Id                   uint64   `protobuf:"varint,1,opt,name=Id" json:"Id,omitempty"`
 	Site                 string   `protobuf:"bytes,2,opt,name=Site" json:"Site,omitempty"`
-	Number               int      `protobuf:"varint,3,opt,name=Number" json:"Number,omitempty"`
+	Number               int32    `protobuf:"varint,3,opt,name=Number" json:"Number,omitempty"`
 	Chapter              string   `protobuf:"bytes,4,opt,name=Chapter" json:"Chapter,omitempty"`
 	Title                string   `protobuf:"bytes,5,opt,name=Title" json:"Title,omitempty"`
 	Update               string   `protobuf:"bytes,6,opt,name=Update" json:"Update,omitempty"`
@@ -68,7 +68,7 @@ func (m *Manhua) GetSite() string {
 	return ""
 }
 
-func (m *Manhua) GetNumber() int {
+func (m *Manhua) GetNumber() int32 {
 	if m != nil {
 		return m.Number
 	}
