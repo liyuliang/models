@@ -5,7 +5,7 @@ message Manhua {
 
     uint64 Id = 1;
     string Site = 2;
-    int32 Number = 3;
+    int Number = 3;
     string Chapter = 4;
     string Title = 5;
     string Update = 6;
