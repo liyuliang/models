@@ -32,3 +32,7 @@ $ make && make install
 ```
 
 ``protoc-gen-go`` exe file will build in directory $GOBIN
+
+
+#### About protobuf model
+Protobuf message must have an attribute named ``Id``

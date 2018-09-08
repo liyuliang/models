@@ -9,7 +9,7 @@ func init() {
 }
 
 type Manhua struct {
-	Id      uint
+	Id      uint64
 	Site    string
 	Number  int
 	Chapter string
@@ -17,6 +17,10 @@ type Manhua struct {
 	Update  time.Time
 }
 
-func (table *Manhua) Name() string {
+func (m *Manhua) Name() string {
 	return "MANHUA"
+}
+
+func (m *Manhua) GetId() uint64 {
+	return m.Id
 }
