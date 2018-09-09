@@ -35,7 +35,4 @@ $ make && make install
 
 
 #### About protobuf model
-Protobuf message must have an attribute named Id and a method named GetId()
-
-#### About elasticsearch model
-Elasticsaerch message must have an attribute named Id and a method named GetId()
+Protobuf message must have an attribute named Id and a method named GetId(), the ``Id`` was unique sequence in one index
