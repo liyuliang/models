@@ -5,8 +5,8 @@ import "models/protobuf/task"
 func init() {
 	_list = make(map[string]modelCreator)
 
-	_list["manhua"] = func() Model {
-		return new(Manhua)
+	_list["parser_manhua_page"] = func() Model {
+		return new(task.ParserManhuaPage)
 	}
 
 	_list["saver_manhua_site"] = func() Model {

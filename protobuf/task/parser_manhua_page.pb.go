@@ -18,54 +18,62 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
-type ParserManhuaChuixue struct {
-	Category             string   `protobuf:"bytes,1,opt,name=Category" json:"Category,omitempty"`
-	Site                 string   `protobuf:"bytes,2,opt,name=Site" json:"Site,omitempty"`
-	Url                  string   `protobuf:"bytes,3,opt,name=Url" json:"Url,omitempty"`
+type ParserManhuaPage struct {
+	Id                   uint64   `protobuf:"varint,1,opt,name=Id" json:"Id,omitempty"`
+	Category             string   `protobuf:"bytes,2,opt,name=Category" json:"Category,omitempty"`
+	Site                 string   `protobuf:"bytes,3,opt,name=Site" json:"Site,omitempty"`
+	Url                  string   `protobuf:"bytes,4,opt,name=Url" json:"Url,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *ParserManhuaChuixue) Reset()         { *m = ParserManhuaChuixue{} }
-func (m *ParserManhuaChuixue) String() string { return proto.CompactTextString(m) }
-func (*ParserManhuaChuixue) ProtoMessage()    {}
-func (*ParserManhuaChuixue) Descriptor() ([]byte, []int) {
-	return fileDescriptor_parser_manhua_page_d7afe42f3745912c, []int{0}
+func (m *ParserManhuaPage) Reset()         { *m = ParserManhuaPage{} }
+func (m *ParserManhuaPage) String() string { return proto.CompactTextString(m) }
+func (*ParserManhuaPage) ProtoMessage()    {}
+func (*ParserManhuaPage) Descriptor() ([]byte, []int) {
+	return fileDescriptor_parser_manhua_page_4c26fc1570736876, []int{0}
 }
-func (m *ParserManhuaChuixue) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ParserManhuaChuixue.Unmarshal(m, b)
+func (m *ParserManhuaPage) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ParserManhuaPage.Unmarshal(m, b)
 }
-func (m *ParserManhuaChuixue) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ParserManhuaChuixue.Marshal(b, m, deterministic)
+func (m *ParserManhuaPage) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ParserManhuaPage.Marshal(b, m, deterministic)
 }
-func (dst *ParserManhuaChuixue) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ParserManhuaChuixue.Merge(dst, src)
+func (dst *ParserManhuaPage) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ParserManhuaPage.Merge(dst, src)
 }
-func (m *ParserManhuaChuixue) XXX_Size() int {
-	return xxx_messageInfo_ParserManhuaChuixue.Size(m)
+func (m *ParserManhuaPage) XXX_Size() int {
+	return xxx_messageInfo_ParserManhuaPage.Size(m)
 }
-func (m *ParserManhuaChuixue) XXX_DiscardUnknown() {
-	xxx_messageInfo_ParserManhuaChuixue.DiscardUnknown(m)
+func (m *ParserManhuaPage) XXX_DiscardUnknown() {
+	xxx_messageInfo_ParserManhuaPage.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_ParserManhuaChuixue proto.InternalMessageInfo
+var xxx_messageInfo_ParserManhuaPage proto.InternalMessageInfo
 
-func (m *ParserManhuaChuixue) GetCategory() string {
+func (m *ParserManhuaPage) GetId() uint64 {
+	if m != nil {
+		return m.Id
+	}
+	return 0
+}
+
+func (m *ParserManhuaPage) GetCategory() string {
 	if m != nil {
 		return m.Category
 	}
 	return ""
 }
 
-func (m *ParserManhuaChuixue) GetSite() string {
+func (m *ParserManhuaPage) GetSite() string {
 	if m != nil {
 		return m.Site
 	}
 	return ""
 }
 
-func (m *ParserManhuaChuixue) GetUrl() string {
+func (m *ParserManhuaPage) GetUrl() string {
 	if m != nil {
 		return m.Url
 	}
@@ -73,22 +81,22 @@ func (m *ParserManhuaChuixue) GetUrl() string {
 }
 
 func init() {
-	proto.RegisterType((*ParserManhuaChuixue)(nil), "task.Parser_manhua_chuixue")
+	proto.RegisterType((*ParserManhuaPage)(nil), "task.Parser_manhua_page")
 }
 
 func init() {
-	proto.RegisterFile("protobuf/task/parser_manhua_page.proto", fileDescriptor_parser_manhua_page_d7afe42f3745912c)
+	proto.RegisterFile("protobuf/task/parser_manhua_page.proto", fileDescriptor_parser_manhua_page_4c26fc1570736876)
 }
 
-var fileDescriptor_parser_manhua_page_d7afe42f3745912c = []byte{
-	// 131 bytes of a gzipped FileDescriptorProto
+var fileDescriptor_parser_manhua_page_4c26fc1570736876 = []byte{
+	// 140 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x52, 0x2b, 0x28, 0xca, 0x2f,
 	0xc9, 0x4f, 0x2a, 0x4d, 0xd3, 0x2f, 0x49, 0x2c, 0xce, 0xd6, 0x2f, 0x48, 0x2c, 0x2a, 0x4e, 0x2d,
 	0x8a, 0xcf, 0x4d, 0xcc, 0xcb, 0x28, 0x4d, 0x8c, 0x2f, 0x48, 0x4c, 0x4f, 0xd5, 0x03, 0x2b, 0x10,
-	0x62, 0x01, 0x49, 0x2b, 0x45, 0x72, 0x89, 0x06, 0xa0, 0xa8, 0x48, 0xce, 0x28, 0xcd, 0xac, 0x28,
-	0x4d, 0x15, 0x92, 0xe2, 0xe2, 0x70, 0x4e, 0x2c, 0x49, 0x4d, 0xcf, 0x2f, 0xaa, 0x94, 0x60, 0x54,
-	0x60, 0xd4, 0xe0, 0x0c, 0x82, 0xf3, 0x85, 0x84, 0xb8, 0x58, 0x82, 0x33, 0x4b, 0x52, 0x25, 0x98,
-	0xc0, 0xe2, 0x60, 0xb6, 0x90, 0x00, 0x17, 0x73, 0x68, 0x51, 0x8e, 0x04, 0x33, 0x58, 0x08, 0xc4,
-	0x4c, 0x62, 0x03, 0xdb, 0x63, 0x0c, 0x08, 0x00, 0x00, 0xff, 0xff, 0x99, 0xb7, 0x00, 0xaa, 0x91,
-	0x00, 0x00, 0x00,
+	0x62, 0x01, 0x49, 0x2b, 0xa5, 0x71, 0x09, 0x05, 0x60, 0xa8, 0x10, 0xe2, 0xe3, 0x62, 0xf2, 0x4c,
+	0x91, 0x60, 0x54, 0x60, 0xd4, 0x60, 0x09, 0x62, 0xf2, 0x4c, 0x11, 0x92, 0xe2, 0xe2, 0x70, 0x4e,
+	0x2c, 0x49, 0x4d, 0xcf, 0x2f, 0xaa, 0x94, 0x60, 0x52, 0x60, 0xd4, 0xe0, 0x0c, 0x82, 0xf3, 0x85,
+	0x84, 0xb8, 0x58, 0x82, 0x33, 0x4b, 0x52, 0x25, 0x98, 0xc1, 0xe2, 0x60, 0xb6, 0x90, 0x00, 0x17,
+	0x73, 0x68, 0x51, 0x8e, 0x04, 0x0b, 0x58, 0x08, 0xc4, 0x4c, 0x62, 0x03, 0x5b, 0x6a, 0x0c, 0x08,
+	0x00, 0x00, 0xff, 0xff, 0x6f, 0x9b, 0x5f, 0xd2, 0x9e, 0x00, 0x00, 0x00,
 }
