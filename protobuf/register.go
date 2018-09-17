@@ -8,7 +8,20 @@ func init() {
 	_list["manhua"] = func() Model {
 		return new(Manhua)
 	}
-	_list["a"] = func() Model {
+
+	_list["saver_manhua_site"] = func() Model {
 		return new(task.SaverManhuaSite)
+	}
+
+	_list["saver_manhua_chapter"] = func() Model {
+		return new(task.SaverManhuaChapter)
+	}
+
+	_list["saver_manhua_image"] = func() Model {
+		return new(task.SaverManhuaImage)
+	}
+
+	_list["indexer_manhua_chapter"] = func() Model {
+		return new(task.IndexManhuaChapter)
 	}
 }

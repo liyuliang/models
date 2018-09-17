@@ -39,5 +39,5 @@ Protobuf message must have an attribute named Id and a method named GetId(), the
 
 #### Usage
 ```text
-cd protobuf; ../bin/protoc --go_out=. *.proto
+./bin/protoc --go_out=. *.proto
 ```
