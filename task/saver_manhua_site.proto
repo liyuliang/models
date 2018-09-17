@@ -1,0 +1,15 @@
+syntax="proto3";
+package task;
+
+message Saver_manhua_site {
+
+    int Id = 1;
+    string Site = 2;
+    string Name = 3;
+    string Url = 4;
+    int    Number = 5;
+    string Categories = 6;
+    string Face = 7;
+    google.protobuf.Timestamp UpdateTime = 8;
+    google.protobuf.Timestamp CheckTime = 9;
+}
