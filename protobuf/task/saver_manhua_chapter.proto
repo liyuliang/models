@@ -1,0 +1,16 @@
+syntax="proto3";
+package task;
+import "vendor/github.com/golang/protobuf/ptypes/timestamp/timestamp.proto";
+
+message Saver_manhua_chapter {
+
+    uint64 Id = 1;
+    string Site = 2;
+    int32    Number = 3;
+    string Chapter = 4;
+    string Title = 5;
+    string Url = 6;
+    google.protobuf.Timestamp FinishedTime = 7;
+    bool Available = 8;
+    google.protobuf.Timestamp UpdateTime = 9;
+}

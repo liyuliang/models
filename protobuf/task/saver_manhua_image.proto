@@ -3,9 +3,9 @@ package task;
 
 message Saver_manhua_image {
 
-    int Id = 1;
+    uint64  Id = 1;
     string Site = 2;
-    int    Number = 3;
+    int32  Number = 3;
     string Chapter = 4;
     string Sequence = 5;
     string Url = 6;
