@@ -2,7 +2,7 @@ package database
 
 import (
 	"testing"
-	"gitee.com/liyuliang/utils/access"
+	"gitee.com/liyuliang/access"
 	"encoding/json"
 )
 
