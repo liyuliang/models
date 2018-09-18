@@ -1,5 +1,5 @@
 syntax="proto2";
-package task;
+package protobuf;
 
 message Parser_manhua_page {
 

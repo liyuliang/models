@@ -1,5 +1,5 @@
 syntax="proto2";
-package task;
+package protobuf;
 
 message Saver_manhua_image {
 
