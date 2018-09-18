@@ -1,10 +1,10 @@
-syntax="proto2";
+syntax="proto3";
 package protobuf;
 
 message Parser_manhua_page {
 
-    required uint64 Id = 1;
-    required string Category = 2;
-    required string Site = 3;
-    required string Url = 4;
+    uint64 Id = 1;
+    string Category = 2;
+    string Site = 3;
+    string Url = 4;
 }

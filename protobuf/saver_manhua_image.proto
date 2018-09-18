@@ -1,13 +1,13 @@
-syntax="proto2";
+syntax="proto3";
 package protobuf;
 
 message Saver_manhua_image {
 
-    required uint64  Id = 1;
-    required string Site = 2;
-    required int32  Number = 3;
-    required string Chapter = 4;
-    required string Sequence = 5;
-    required string Url = 6;
-    required string Uuid = 7;
+    uint64  Id = 1;
+    string Site = 2;
+    int32  Number = 3;
+    string Chapter = 4;
+    string Sequence = 5;
+    string Url = 6;
+    string Uuid = 7;
 }

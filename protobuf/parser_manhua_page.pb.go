@@ -19,10 +19,10 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type ParserManhuaPage struct {
-	Id                   *uint64  `protobuf:"varint,1,req,name=Id" json:"Id,omitempty"`
-	Category             *string  `protobuf:"bytes,2,req,name=Category" json:"Category,omitempty"`
-	Site                 *string  `protobuf:"bytes,3,req,name=Site" json:"Site,omitempty"`
-	Url                  *string  `protobuf:"bytes,4,req,name=Url" json:"Url,omitempty"`
+	Id                   uint64   `protobuf:"varint,1,opt,name=Id,proto3" json:"Id,omitempty"`
+	Category             string   `protobuf:"bytes,2,opt,name=Category,proto3" json:"Category,omitempty"`
+	Site                 string   `protobuf:"bytes,3,opt,name=Site,proto3" json:"Site,omitempty"`
+	Url                  string   `protobuf:"bytes,4,opt,name=Url,proto3" json:"Url,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -32,7 +32,7 @@ func (m *ParserManhuaPage) Reset()         { *m = ParserManhuaPage{} }
 func (m *ParserManhuaPage) String() string { return proto.CompactTextString(m) }
 func (*ParserManhuaPage) ProtoMessage()    {}
 func (*ParserManhuaPage) Descriptor() ([]byte, []int) {
-	return fileDescriptor_parser_manhua_page_e857124cc5bac1a5, []int{0}
+	return fileDescriptor_parser_manhua_page_b29d742e2d153b78, []int{0}
 }
 func (m *ParserManhuaPage) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ParserManhuaPage.Unmarshal(m, b)
@@ -53,29 +53,29 @@ func (m *ParserManhuaPage) XXX_DiscardUnknown() {
 var xxx_messageInfo_ParserManhuaPage proto.InternalMessageInfo
 
 func (m *ParserManhuaPage) GetId() uint64 {
-	if m != nil && m.Id != nil {
-		return *m.Id
+	if m != nil {
+		return m.Id
 	}
 	return 0
 }
 
 func (m *ParserManhuaPage) GetCategory() string {
-	if m != nil && m.Category != nil {
-		return *m.Category
+	if m != nil {
+		return m.Category
 	}
 	return ""
 }
 
 func (m *ParserManhuaPage) GetSite() string {
-	if m != nil && m.Site != nil {
-		return *m.Site
+	if m != nil {
+		return m.Site
 	}
 	return ""
 }
 
 func (m *ParserManhuaPage) GetUrl() string {
-	if m != nil && m.Url != nil {
-		return *m.Url
+	if m != nil {
+		return m.Url
 	}
 	return ""
 }
@@ -85,18 +85,18 @@ func init() {
 }
 
 func init() {
-	proto.RegisterFile("protobuf/parser_manhua_page.proto", fileDescriptor_parser_manhua_page_e857124cc5bac1a5)
+	proto.RegisterFile("protobuf/parser_manhua_page.proto", fileDescriptor_parser_manhua_page_b29d742e2d153b78)
 }
 
-var fileDescriptor_parser_manhua_page_e857124cc5bac1a5 = []byte{
-	// 130 bytes of a gzipped FileDescriptorProto
+var fileDescriptor_parser_manhua_page_b29d742e2d153b78 = []byte{
+	// 135 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x52, 0x2c, 0x28, 0xca, 0x2f,
 	0xc9, 0x4f, 0x2a, 0x4d, 0xd3, 0x2f, 0x48, 0x2c, 0x2a, 0x4e, 0x2d, 0x8a, 0xcf, 0x4d, 0xcc, 0xcb,
 	0x28, 0x4d, 0x8c, 0x2f, 0x48, 0x4c, 0x4f, 0xd5, 0x03, 0xcb, 0x09, 0x71, 0xc0, 0x94, 0x28, 0xa5,
-	0x71, 0x09, 0x05, 0x60, 0xa8, 0x12, 0xe2, 0xe3, 0x62, 0xf2, 0x4c, 0x91, 0x60, 0x54, 0x60, 0xd2,
+	0x71, 0x09, 0x05, 0x60, 0xa8, 0x12, 0xe2, 0xe3, 0x62, 0xf2, 0x4c, 0x91, 0x60, 0x54, 0x60, 0xd4,
 	0x60, 0x09, 0x62, 0xf2, 0x4c, 0x11, 0x92, 0xe2, 0xe2, 0x70, 0x4e, 0x2c, 0x49, 0x4d, 0xcf, 0x2f,
-	0xaa, 0x94, 0x60, 0x52, 0x60, 0xd2, 0xe0, 0x0c, 0x82, 0xf3, 0x85, 0x84, 0xb8, 0x58, 0x82, 0x33,
+	0xaa, 0x94, 0x60, 0x52, 0x60, 0xd4, 0xe0, 0x0c, 0x82, 0xf3, 0x85, 0x84, 0xb8, 0x58, 0x82, 0x33,
 	0x4b, 0x52, 0x25, 0x98, 0xc1, 0xe2, 0x60, 0xb6, 0x90, 0x00, 0x17, 0x73, 0x68, 0x51, 0x8e, 0x04,
-	0x0b, 0x58, 0x08, 0xc4, 0x04, 0x04, 0x00, 0x00, 0xff, 0xff, 0x10, 0x16, 0xb3, 0xf1, 0x95, 0x00,
-	0x00, 0x00,
+	0x0b, 0x58, 0x08, 0xc4, 0x4c, 0x62, 0x03, 0xdb, 0x68, 0x0c, 0x08, 0x00, 0x00, 0xff, 0xff, 0xd8,
+	0x83, 0x36, 0x4f, 0x9d, 0x00, 0x00, 0x00,
 }

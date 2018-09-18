@@ -1,15 +1,15 @@
-syntax="proto2";
+syntax="proto3";
 package protobuf;
 
 import "vendor/github.com/golang/protobuf/ptypes/timestamp/timestamp.proto";
 
 message Index_manhua_chapter {
 
-    required uint64 Id = 1;
-    required string Site = 2;
-    required int32 Number = 3;
-    required string Chapter = 4;
-    required string Title = 5;
-    optional google.protobuf.Timestamp Update = 6;
+    uint64 Id = 1;
+    string Site = 2;
+    int32 Number = 3;
+    string Chapter = 4;
+    string Title = 5;
+    google.protobuf.Timestamp Update = 6;
 
 }
