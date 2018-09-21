@@ -7,6 +7,10 @@ func init() {
 		return new(ParserManhuaPage)
 	}
 
+	_list["parser_manhua_listing"] = func() Model {
+		return new(ParserManhuaListing)
+	}
+
 	_list["saver_manhua_site"] = func() Model {
 		return new(SaverManhuaSite)
 	}
