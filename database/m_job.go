@@ -3,7 +3,7 @@ package database
 import (
 	"time"
 	"strings"
-	"gitee.com/liyuliang/utils/format"
+	"github.com/liyuliang/utils/format"
 )
 
 func init() {

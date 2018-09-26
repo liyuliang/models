@@ -2,7 +2,7 @@ package database
 
 import (
 	"testing"
-	"gitee.com/liyuliang/access"
+	"github.com/liyuliang/access"
 	"encoding/json"
 )
 
