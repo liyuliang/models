@@ -30,9 +30,9 @@ type SaverManhuaSite struct {
 	Face                 string               `protobuf:"bytes,8,opt,name=Face,proto3" json:"Face,omitempty"`
 	UpdateTime           *timestamp.Timestamp `protobuf:"bytes,9,opt,name=UpdateTime" json:"UpdateTime,omitempty"`
 	CheckTime            *timestamp.Timestamp `protobuf:"bytes,10,opt,name=CheckTime" json:"CheckTime,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}             `gorm:"-" json:"-"`
+	XXX_unrecognized     []byte               `gorm:"-" json:"-"`
+	XXX_sizecache        int32                `gorm:"-" json:"-"`
 }
 
 func (m *SaverManhuaSite) Reset()         { *m = SaverManhuaSite{} }

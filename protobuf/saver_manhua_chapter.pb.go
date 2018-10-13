@@ -29,9 +29,9 @@ type SaverManhuaChapter struct {
 	FinishedTime         *timestamp.Timestamp `protobuf:"bytes,7,opt,name=FinishedTime,proto3" json:"FinishedTime,omitempty"`
 	Available            bool                 `protobuf:"varint,8,opt,name=Available,proto3" json:"Available,omitempty"`
 	UpdateTime           *timestamp.Timestamp `protobuf:"bytes,9,opt,name=UpdateTime,proto3" json:"UpdateTime,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}             `gorm:"-" json:"-"`
+	XXX_unrecognized     []byte               `gorm:"-" json:"-"`
+	XXX_sizecache        int32                `gorm:"-" json:"-"`
 }
 
 func (m *SaverManhuaChapter) Reset()         { *m = SaverManhuaChapter{} }

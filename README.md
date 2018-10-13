@@ -5,8 +5,10 @@ You can use the package [gorm](https://github.com/jinzhu/gorm) to storage these 
 If you will use these models to saving in mysql, you should add the model property description.
 
 #### Software Architecture
-The new model starts with the "m_" name
-
+1. The new model starts with the "m_" name
+2. If you want to ignore the field in [gorm](https://github.com/jinzhu/gorm) , you should add a tag ``gorm:"-" `` which doc is [http://doc.gorm.io/models.html#model-definition](http://doc.gorm.io/models.html#model-definition)
+   After Update a protobuf model , you should add the tag manually.
+   
 #### Installation
 ```text
 $ go get gitee.com/liyuliang/models

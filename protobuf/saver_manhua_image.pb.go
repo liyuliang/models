@@ -26,9 +26,9 @@ type SaverManhuaImage struct {
 	Sequence             string   `protobuf:"bytes,5,opt,name=Sequence,proto3" json:"Sequence,omitempty"`
 	Url                  string   `protobuf:"bytes,6,opt,name=Url,proto3" json:"Url,omitempty"`
 	Uuid                 string   `protobuf:"bytes,7,opt,name=Uuid,proto3" json:"Uuid,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `gorm:"-" json:"-"`
+	XXX_unrecognized     []byte   `gorm:"-" json:"-"`
+	XXX_sizecache        int32    `gorm:"-" json:"-"`
 }
 
 func (m *SaverManhuaImage) Reset()         { *m = SaverManhuaImage{} }
