@@ -19,25 +19,31 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type SaverManhuaChapter struct {
-	Id                   uint64   `protobuf:"varint,1,opt,name=Id" json:"Id,omitempty"`
-	Site                 string   `protobuf:"bytes,2,opt,name=Site" json:"Site,omitempty"`
-	Number               int32    `protobuf:"varint,3,opt,name=Number" json:"Number,omitempty"`
-	Chapter              string   `protobuf:"bytes,4,opt,name=Chapter" json:"Chapter,omitempty"`
+	Id uint64 `protobuf:"varint,1,opt,name=Id" json:"Id,omitempty"`
+	// @inject_tag: gorm:"index:site"
+	Site string `protobuf:"bytes,2,opt,name=Site" json:"Site,omitempty" gorm:"index:site"`
+	// @inject_tag: gorm:"index:number"
+	Number int32 `protobuf:"varint,3,opt,name=Number" json:"Number,omitempty" gorm:"index:number"`
+	// @inject_tag: gorm:"index:chapter"
+	Chapter              string   `protobuf:"bytes,4,opt,name=Chapter" json:"Chapter,omitempty" gorm:"index:chapter"`
 	Title                string   `protobuf:"bytes,5,opt,name=Title" json:"Title,omitempty"`
 	Url                  string   `protobuf:"bytes,6,opt,name=Url" json:"Url,omitempty"`
 	FinishedTime         int64    `protobuf:"varint,7,opt,name=FinishedTime" json:"FinishedTime,omitempty"`
 	Available            bool     `protobuf:"varint,8,opt,name=Available" json:"Available,omitempty"`
 	UpdateTime           int64    `protobuf:"varint,9,opt,name=UpdateTime" json:"UpdateTime,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `gorm:"-" json:"-"`
-	XXX_unrecognized     []byte   `gorm:"-" json:"-"`
-	XXX_sizecache        int32    `gorm:"-" json:"-"`
+	// @inject_tag: gorm:"-"
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	// @inject_tag: gorm:"-"
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	// @inject_tag: gorm:"-"
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *SaverManhuaChapter) Reset()         { *m = SaverManhuaChapter{} }
 func (m *SaverManhuaChapter) String() string { return proto.CompactTextString(m) }
 func (*SaverManhuaChapter) ProtoMessage()    {}
 func (*SaverManhuaChapter) Descriptor() ([]byte, []int) {
-	return fileDescriptor_saver_manhua_chapter_f55685cd2e36f374, []int{0}
+	return fileDescriptor_saver_manhua_chapter_9fcaf98fdd59439d, []int{0}
 }
 func (m *SaverManhuaChapter) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaverManhuaChapter.Unmarshal(m, b)
@@ -125,10 +131,10 @@ func init() {
 }
 
 func init() {
-	proto.RegisterFile("protobuf/saver_manhua_chapter.proto", fileDescriptor_saver_manhua_chapter_f55685cd2e36f374)
+	proto.RegisterFile("protobuf/saver_manhua_chapter.proto", fileDescriptor_saver_manhua_chapter_9fcaf98fdd59439d)
 }
 
-var fileDescriptor_saver_manhua_chapter_f55685cd2e36f374 = []byte{
+var fileDescriptor_saver_manhua_chapter_9fcaf98fdd59439d = []byte{
 	// 226 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x6c, 0x90, 0x4f, 0x4b, 0x03, 0x31,
 	0x10, 0xc5, 0xc9, 0xfe, 0xeb, 0xee, 0x20, 0x22, 0x43, 0x91, 0x39, 0x88, 0x84, 0x7a, 0xc9, 0x49,

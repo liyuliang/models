@@ -6,3 +6,4 @@ import:
   subpackages:
   - protoc-gen-go
   - proto
+- package: github.com/favadi/protoc-go-inject-tag

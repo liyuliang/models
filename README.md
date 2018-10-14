@@ -1,5 +1,15 @@
 # models
 
+#### Go version
+```text
+$ go version
+go version go1.10.3 linux/amd64
+```
+
+Inject custom tags to protobuf golang struct package [protoc-go-inject-tag](https://github.com/favadi/protoc-go-inject-tag)
+needs go 1.10
+
+
 #### Description
 You can use the package [gorm](https://github.com/jinzhu/gorm) to storage these models into mysql database.
 If you will use these models to saving in mysql, you should add the model property description.
@@ -35,11 +45,30 @@ $ make && make install
 
 ``protoc-gen-go`` exe file will build in directory $GOBIN
 
+#### Build protoc-go-inject-tag
+```text
+$ glide get github.com/favadi/protoc-go-inject-tag.git
+$ cd vendor/github.com/favadi/protoc-go-inject-tag
+$ go install
+```
+``protoc-go-inject-tag`` exe file will find in directory $GOBIN
+
 
 #### About protobuf model
 Protobuf message must have an attribute named Id and a method named GetId(), the ``Id`` was unique sequence in one index
 
+
 #### Usage
 ```text
-./bin/protoc --go_out=. ./protobuf/*.proto
+$ ./bin/protoc --go_out=. ./protobuf/*.proto
+```
+
+Add ``// @inject_tag: gorm:"-"`` at proto struct filter property
+````
+    // @inject_tag: gorm:"-"
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+```
+
+```
+$ protoc-go-inject-tag -input=./protobuf/xxxx.pb.go
 ```

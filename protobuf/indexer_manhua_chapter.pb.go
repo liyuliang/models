@@ -25,9 +25,9 @@ type IndexManhuaChapter struct {
 	Chapter              string   `protobuf:"bytes,4,opt,name=Chapter" json:"Chapter,omitempty"`
 	Title                string   `protobuf:"bytes,5,opt,name=Title" json:"Title,omitempty"`
 	Update               int64    `protobuf:"varint,6,opt,name=Update" json:"Update,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `gorm:"-" json:"-"`
-	XXX_unrecognized     []byte   `gorm:"-" json:"-"`
-	XXX_sizecache        int32    `gorm:"-" json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
 }
 
 func (m *IndexManhuaChapter) Reset()         { *m = IndexManhuaChapter{} }
