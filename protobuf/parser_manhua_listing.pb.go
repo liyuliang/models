@@ -19,10 +19,10 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type ParserManhuaListing struct {
-	Id                   uint64   `protobuf:"varint,1,opt,name=Id" json:"Id,omitempty"`
-	Category             string   `protobuf:"bytes,2,opt,name=Category" json:"Category,omitempty"`
-	Site                 string   `protobuf:"bytes,3,opt,name=Site" json:"Site,omitempty"`
-	Url                  string   `protobuf:"bytes,4,opt,name=Url" json:"Url,omitempty"`
+	Id                   uint64   `protobuf:"varint,1,opt,name=Id,proto3" json:"Id,omitempty"`
+	Category             string   `protobuf:"bytes,2,opt,name=Category,proto3" json:"Category,omitempty"`
+	Site                 string   `protobuf:"bytes,3,opt,name=Site,proto3" json:"Site,omitempty"`
+	Url                  string   `protobuf:"bytes,4,opt,name=Url,proto3" json:"Url,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`

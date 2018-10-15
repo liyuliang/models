@@ -19,18 +19,18 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type SaverManhuaSite struct {
-	Id uint64 `protobuf:"varint,1,opt,name=Id" json:"Id,omitempty"`
+	Id uint64 `protobuf:"varint,1,opt,name=Id,proto3" json:"Id,omitempty"`
 	// @inject_tag: gorm:"index:site"
-	Site string `protobuf:"bytes,2,opt,name=Site" json:"Site,omitempty" gorm:"index:site"`
-	Name string `protobuf:"bytes,3,opt,name=Name" json:"Name,omitempty"`
-	Url  string `protobuf:"bytes,4,opt,name=Url" json:"Url,omitempty"`
+	Site string `protobuf:"bytes,2,opt,name=Site,proto3" json:"Site,omitempty" gorm:"index:site"`
+	Name string `protobuf:"bytes,3,opt,name=Name,proto3" json:"Name,omitempty"`
+	Url  string `protobuf:"bytes,4,opt,name=Url,proto3" json:"Url,omitempty"`
 	// @inject_tag: gorm:"index:number"
-	Number               int32    `protobuf:"varint,5,opt,name=Number" json:"Number,omitempty" gorm:"index:number"`
-	Categories           string   `protobuf:"bytes,6,opt,name=Categories" json:"Categories,omitempty"`
-	Description          string   `protobuf:"bytes,7,opt,name=Description" json:"Description,omitempty"`
-	Face                 string   `protobuf:"bytes,8,opt,name=Face" json:"Face,omitempty"`
-	UpdateTime           int64    `protobuf:"varint,9,opt,name=UpdateTime" json:"UpdateTime,omitempty"`
-	CheckTime            int64    `protobuf:"varint,10,opt,name=CheckTime" json:"CheckTime,omitempty"`
+	Number               int32    `protobuf:"varint,5,opt,name=Number,proto3" json:"Number,omitempty" gorm:"index:number"`
+	Categories           string   `protobuf:"bytes,6,opt,name=Categories,proto3" json:"Categories,omitempty"`
+	Description          string   `protobuf:"bytes,7,opt,name=Description,proto3" json:"Description,omitempty"`
+	Face                 string   `protobuf:"bytes,8,opt,name=Face,proto3" json:"Face,omitempty"`
+	UpdateTime           int64    `protobuf:"varint,9,opt,name=UpdateTime,proto3" json:"UpdateTime,omitempty"`
+	CheckTime            int64    `protobuf:"varint,10,opt,name=CheckTime,proto3" json:"CheckTime,omitempty"`
 	// @inject_tag: gorm:"-"
 	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
 	// @inject_tag: gorm:"-"

@@ -11,6 +11,6 @@ message Saver_manhua_image {
     //@inject_tag: gorm:"index:chapter"
     string Chapter = 4;
     //@inject_tag: gorm:"index:sequence"
-    string Sequence = 5;
+    int32 Sequence = 5;
     string Url = 6;
 }

@@ -19,16 +19,16 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type SaverManhuaImage struct {
-	Id uint64 `protobuf:"varint,1,opt,name=Id" json:"Id,omitempty"`
+	Id uint64 `protobuf:"varint,1,opt,name=Id,proto3" json:"Id,omitempty"`
 	// @inject_tag: gorm:"index:site"
-	Site string `protobuf:"bytes,2,opt,name=Site" json:"Site,omitempty" gorm:"index:site"`
+	Site string `protobuf:"bytes,2,opt,name=Site,proto3" json:"Site,omitempty" gorm:"index:site"`
 	// @inject_tag: gorm:"index:number"
-	Number int32 `protobuf:"varint,3,opt,name=Number" json:"Number,omitempty" gorm:"index:number"`
+	Number int32 `protobuf:"varint,3,opt,name=Number,proto3" json:"Number,omitempty" gorm:"index:number"`
 	// @inject_tag: gorm:"index:chapter"
-	Chapter string `protobuf:"bytes,4,opt,name=Chapter" json:"Chapter,omitempty" gorm:"index:chapter"`
+	Chapter string `protobuf:"bytes,4,opt,name=Chapter,proto3" json:"Chapter,omitempty" gorm:"index:chapter"`
 	// @inject_tag: gorm:"index:sequence"
-	Sequence             string   `protobuf:"bytes,5,opt,name=Sequence" json:"Sequence,omitempty" gorm:"index:sequence"`
-	Url                  string   `protobuf:"bytes,6,opt,name=Url" json:"Url,omitempty"`
+	Sequence             int32    `protobuf:"varint,5,opt,name=Sequence,proto3" json:"Sequence,omitempty" gorm:"index:sequence"`
+	Url                  string   `protobuf:"bytes,6,opt,name=Url,proto3" json:"Url,omitempty"`
 	// @inject_tag: gorm:"-"
 	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
 	// @inject_tag: gorm:"-"
@@ -41,7 +41,7 @@ func (m *SaverManhuaImage) Reset()         { *m = SaverManhuaImage{} }
 func (m *SaverManhuaImage) String() string { return proto.CompactTextString(m) }
 func (*SaverManhuaImage) ProtoMessage()    {}
 func (*SaverManhuaImage) Descriptor() ([]byte, []int) {
-	return fileDescriptor_saver_manhua_image_b562986c2fe1a67f, []int{0}
+	return fileDescriptor_saver_manhua_image_3eba6bbbb055f01d, []int{0}
 }
 func (m *SaverManhuaImage) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaverManhuaImage.Unmarshal(m, b)
@@ -89,11 +89,11 @@ func (m *SaverManhuaImage) GetChapter() string {
 	return ""
 }
 
-func (m *SaverManhuaImage) GetSequence() string {
+func (m *SaverManhuaImage) GetSequence() int32 {
 	if m != nil {
 		return m.Sequence
 	}
-	return ""
+	return 0
 }
 
 func (m *SaverManhuaImage) GetUrl() string {
@@ -108,10 +108,10 @@ func init() {
 }
 
 func init() {
-	proto.RegisterFile("protobuf/saver_manhua_image.proto", fileDescriptor_saver_manhua_image_b562986c2fe1a67f)
+	proto.RegisterFile("protobuf/saver_manhua_image.proto", fileDescriptor_saver_manhua_image_3eba6bbbb055f01d)
 }
 
-var fileDescriptor_saver_manhua_image_b562986c2fe1a67f = []byte{
+var fileDescriptor_saver_manhua_image_3eba6bbbb055f01d = []byte{
 	// 172 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x52, 0x2c, 0x28, 0xca, 0x2f,
 	0xc9, 0x4f, 0x2a, 0x4d, 0xd3, 0x2f, 0x4e, 0x2c, 0x4b, 0x2d, 0x8a, 0xcf, 0x4d, 0xcc, 0xcb, 0x28,
@@ -121,7 +121,7 @@ var fileDescriptor_saver_manhua_image_b562986c2fe1a67f = []byte{
 	0xa4, 0xc0, 0xa8, 0xc1, 0x19, 0x04, 0x66, 0x0b, 0x89, 0x71, 0xb1, 0xf9, 0x95, 0xe6, 0x26, 0xa5,
 	0x16, 0x49, 0x30, 0x2b, 0x30, 0x6a, 0xb0, 0x06, 0x41, 0x79, 0x42, 0x12, 0x5c, 0xec, 0xce, 0x19,
 	0x89, 0x05, 0x25, 0xa9, 0x45, 0x12, 0x2c, 0x60, 0xe5, 0x30, 0xae, 0x90, 0x14, 0x17, 0x47, 0x70,
-	0x6a, 0x61, 0x69, 0x6a, 0x5e, 0x72, 0xaa, 0x04, 0x2b, 0x58, 0x0a, 0xce, 0x17, 0x12, 0xe0, 0x62,
-	0x0e, 0x2d, 0xca, 0x91, 0x60, 0x03, 0x0b, 0x83, 0x98, 0x49, 0x6c, 0x60, 0x47, 0x1a, 0x03, 0x02,
-	0x00, 0x00, 0xff, 0xff, 0x7d, 0x1b, 0x8a, 0x72, 0xd0, 0x00, 0x00, 0x00,
+	0x6a, 0x61, 0x69, 0x6a, 0x5e, 0x72, 0xaa, 0x04, 0x2b, 0x58, 0x0f, 0x9c, 0x2f, 0x24, 0xc0, 0xc5,
+	0x1c, 0x5a, 0x94, 0x23, 0xc1, 0x06, 0xd6, 0x01, 0x62, 0x26, 0xb1, 0x81, 0x1d, 0x69, 0x0c, 0x08,
+	0x00, 0x00, 0xff, 0xff, 0xbc, 0xe0, 0x7f, 0xc0, 0xd0, 0x00, 0x00, 0x00,
 }
