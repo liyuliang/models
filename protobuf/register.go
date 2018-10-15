@@ -11,8 +11,8 @@ func init() {
 		return new(ParserManhuaListing)
 	}
 
-	_list["saver_manhua_site"] = func() Model {
-		return new(SaverManhuaSite)
+	_list["saver_manhua_book"] = func() Model {
+		return new(SaverManhuaBook)
 	}
 
 	_list["saver_manhua_chapter"] = func() Model {

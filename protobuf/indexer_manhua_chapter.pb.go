@@ -19,12 +19,12 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type IndexManhuaChapter struct {
-	Id                   uint64   `protobuf:"varint,1,opt,name=Id,proto3" json:"Id,omitempty"`
-	Site                 string   `protobuf:"bytes,2,opt,name=Site,proto3" json:"Site,omitempty"`
-	Number               int32    `protobuf:"varint,3,opt,name=Number,proto3" json:"Number,omitempty"`
-	Chapter              string   `protobuf:"bytes,4,opt,name=Chapter,proto3" json:"Chapter,omitempty"`
-	Title                string   `protobuf:"bytes,5,opt,name=Title,proto3" json:"Title,omitempty"`
-	Update               int64    `protobuf:"varint,6,opt,name=Update,proto3" json:"Update,omitempty"`
+	Id                   uint64   `protobuf:"varint,1,opt,name=Id" json:"Id,omitempty"`
+	Site                 string   `protobuf:"bytes,2,opt,name=Site" json:"Site,omitempty"`
+	Number               int32    `protobuf:"varint,3,opt,name=Number" json:"Number,omitempty"`
+	Chapter              string   `protobuf:"bytes,4,opt,name=Chapter" json:"Chapter,omitempty"`
+	Title                string   `protobuf:"bytes,5,opt,name=Title" json:"Title,omitempty"`
+	Update               int64    `protobuf:"varint,6,opt,name=Update" json:"Update,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
