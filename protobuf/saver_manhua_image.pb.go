@@ -21,20 +21,20 @@ const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 type SaverManhuaImage struct {
 	Id uint64 `protobuf:"varint,1,opt,name=Id" json:"Id,omitempty"`
 	// @inject_tag: gorm:"index:site"
-	Site string `protobuf:"bytes,2,opt,name=Site" json:"Site,omitempty"`
+	Site string `protobuf:"bytes,2,opt,name=Site" json:"Site,omitempty" gorm:"index:site"`
 	// @inject_tag: gorm:"index:number"
-	Number int32 `protobuf:"varint,3,opt,name=Number" json:"Number,omitempty"`
+	Number int32 `protobuf:"varint,3,opt,name=Number" json:"Number,omitempty" gorm:"index:number"`
 	// @inject_tag: gorm:"index:chapter"
-	Chapter string `protobuf:"bytes,4,opt,name=Chapter" json:"Chapter,omitempty"`
+	Chapter string `protobuf:"bytes,4,opt,name=Chapter" json:"Chapter,omitempty" gorm:"index:chapter"`
 	// @inject_tag: gorm:"index:sequence"
-	Sequence             int32    `protobuf:"varint,5,opt,name=Sequence" json:"Sequence,omitempty"`
+	Sequence             int32    `protobuf:"varint,5,opt,name=Sequence" json:"Sequence,omitempty" gorm:"index:sequence"`
 	Url                  string   `protobuf:"bytes,6,opt,name=Url" json:"Url,omitempty"`
 	// @inject_tag: gorm:"-"
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
 	// @inject_tag: gorm:"-"
-	XXX_unrecognized     []byte   `json:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
 	// @inject_tag: gorm:"-"
-	XXX_sizecache        int32    `json:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *SaverManhuaImage) Reset()         { *m = SaverManhuaImage{} }
