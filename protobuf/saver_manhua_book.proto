@@ -14,6 +14,8 @@ message Saver_manhua_book {
     string Categories = 6;
     string Description = 7;
     string Face = 8;
+    //@inject_tag: gorm:"column:UpdateTime"
     int64 UpdateTime = 9;
+    //@inject_tag: gorm:"column:CheckTime"
     int64 CheckTime = 10;
 }

@@ -12,7 +12,9 @@ message Saver_manhua_chapter {
     string Chapter = 4;
     string Title = 5;
     string Url = 6;
+    //@inject_tag: gorm:"column:FinishedTime"
     int64 FinishedTime = 7;
     bool Available = 8;
+    //@inject_tag: gorm:"column:UpdateTime"
     int64 UpdateTime = 9;
 }
