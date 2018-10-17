@@ -20,12 +20,12 @@ const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type SaverManhuaBook struct {
 	Id uint64 `protobuf:"varint,1,opt,name=Id" json:"Id,omitempty"`
-	// @inject_tag: gorm:"index:site"
-	Site string `protobuf:"bytes,2,opt,name=Site" json:"Site,omitempty" gorm:"index:site"`
+	// @inject_tag: gorm:"index:site,site_num"
+	Site string `protobuf:"bytes,2,opt,name=Site" json:"Site,omitempty" gorm:"index:site,site_num"`
 	Name string `protobuf:"bytes,3,opt,name=Name" json:"Name,omitempty"`
 	Url  string `protobuf:"bytes,4,opt,name=Url" json:"Url,omitempty"`
-	// @inject_tag: gorm:"index:number"
-	Number      int32  `protobuf:"varint,5,opt,name=Number" json:"Number,omitempty" gorm:"index:number"`
+	// @inject_tag: gorm:"index:number,site_num"
+	Number      int32  `protobuf:"varint,5,opt,name=Number" json:"Number,omitempty" gorm:"index:number,site_num"`
 	Categories  string `protobuf:"bytes,6,opt,name=Categories" json:"Categories,omitempty"`
 	Description string `protobuf:"bytes,7,opt,name=Description" json:"Description,omitempty"`
 	Face        string `protobuf:"bytes,8,opt,name=Face" json:"Face,omitempty"`
@@ -45,7 +45,7 @@ func (m *SaverManhuaBook) Reset()         { *m = SaverManhuaBook{} }
 func (m *SaverManhuaBook) String() string { return proto.CompactTextString(m) }
 func (*SaverManhuaBook) ProtoMessage()    {}
 func (*SaverManhuaBook) Descriptor() ([]byte, []int) {
-	return fileDescriptor_saver_manhua_book_e897c4ab660f056b, []int{0}
+	return fileDescriptor_saver_manhua_book_ce8498e03a7a22f1, []int{0}
 }
 func (m *SaverManhuaBook) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaverManhuaBook.Unmarshal(m, b)
@@ -140,10 +140,10 @@ func init() {
 }
 
 func init() {
-	proto.RegisterFile("protobuf/saver_manhua_book.proto", fileDescriptor_saver_manhua_book_e897c4ab660f056b)
+	proto.RegisterFile("protobuf/saver_manhua_book.proto", fileDescriptor_saver_manhua_book_ce8498e03a7a22f1)
 }
 
-var fileDescriptor_saver_manhua_book_e897c4ab660f056b = []byte{
+var fileDescriptor_saver_manhua_book_ce8498e03a7a22f1 = []byte{
 	// 231 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x5c, 0x90, 0xb1, 0x4e, 0xc3, 0x30,
 	0x10, 0x86, 0xe5, 0x24, 0x0d, 0xcd, 0x21, 0x21, 0xb8, 0x01, 0xdd, 0x80, 0x90, 0xc5, 0x94, 0x09,
