@@ -26,4 +26,8 @@ func init() {
 	_list["indexer_manhua_chapter"] = func() Model {
 		return new(IndexManhuaChapter)
 	}
+
+	_list["indexer_search_item"] = func() Model {
+		return new(IndexSearchItem)
+	}
 }
