@@ -36,6 +36,6 @@ func init() {
 	}
 
 	_list["cache_image"] = func() Model {
-		return new(CacheImage)
+		return new(CacherImage)
 	}
 }
