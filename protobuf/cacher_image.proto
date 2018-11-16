@@ -1,7 +1,7 @@
 syntax="proto3";
 package protobuf;
 
-message Cache_image {
+message Cacher_image {
 
     uint64 Id = 1;
     //@inject_tag: gorm:"index:code,code"
