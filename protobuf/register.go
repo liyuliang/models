@@ -23,11 +23,19 @@ func init() {
 		return new(SaverManhuaImage)
 	}
 
+	_list["saver_fs"] = func() Model {
+		return new(SaverFs)
+	}
+
 	_list["indexer_manhua_chapter"] = func() Model {
 		return new(IndexManhuaChapter)
 	}
 
 	_list["indexer_search_item"] = func() Model {
 		return new(IndexSearchItem)
+	}
+
+	_list["cache_image"] = func() Model {
+		return new(CacheImage)
 	}
 }

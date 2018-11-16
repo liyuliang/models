@@ -3,7 +3,9 @@ package protobuf;
 
 message Cache_image {
 
-    string Code = 1;
-    string Url = 2;
-    string Fsid = 3;
+    uint64 Id = 1;
+    //@inject_tag: gorm:"index:code,code"
+    string Code = 2;
+    string Url = 3;
+    string Fsid = 4;
 }
