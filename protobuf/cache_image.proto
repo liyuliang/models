@@ -7,5 +7,4 @@ message Cache_image {
     //@inject_tag: gorm:"index:code,code"
     string Code = 2;
     string Url = 3;
-    string Fsid = 4;
 }
