@@ -1,0 +1,9 @@
+syntax="proto3";
+package protobuf;
+
+message Cache_image {
+
+    string Code = 1;
+    string Url = 2;
+    string Fsid = 3;
+}
