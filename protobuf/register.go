@@ -35,7 +35,7 @@ func init() {
 		return new(IndexSearchItem)
 	}
 
-	_list["cache_image"] = func() Model {
+	_list["cacher_image"] = func() Model {
 		return new(CacherImage)
 	}
 }
