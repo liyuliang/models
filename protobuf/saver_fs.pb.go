@@ -21,7 +21,7 @@ const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 type SaverFs struct {
 	Id uint64 `protobuf:"varint,1,opt,name=Id,proto3" json:"Id,omitempty"`
 	// @inject_tag: gorm:"index:code,code"
-	Code                 string   `protobuf:"bytes,2,opt,name=Code,proto3" json:"Code,omitempty"`
+	Code                 string   `protobuf:"bytes,2,opt,name=Code,proto3" json:"Code,omitempty" gorm:"index:code,code"`
 	Url                  string   `protobuf:"bytes,3,opt,name=Url,proto3" json:"Url,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
 	XXX_unrecognized     []byte   `json:"-" gorm:"-"`

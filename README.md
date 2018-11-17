@@ -60,15 +60,20 @@ Protobuf message must have an attribute named Id and a method named GetId(), the
 
 #### Usage
 ```text
-$ ./bin/protoc --go_out=. ./protobuf/*.proto
-```
-
-Add ``// @inject_tag: gorm:"-"`` at proto struct filter property
-````
     // @inject_tag: gorm:"-"
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 ```
+Add ``// @inject_tag: gorm:"-"`` at proto struct filter property
+
+
+```text
+$ ./bin/protoc --go_out=. ./protobuf/*.proto
+```
+Generate proto struct go file
+
 
 ```
 $ protoc-go-inject-tag -input=./protobuf/xxxx.pb.go
 ```
+
+Generate proto struct with index property
