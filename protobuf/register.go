@@ -38,4 +38,8 @@ func init() {
 	_list["cacher_image"] = func() Model {
 		return new(CacherImage)
 	}
+
+	_list["checker_image"] = func() Model {
+		return new(CheckerImage)
+	}
 }
