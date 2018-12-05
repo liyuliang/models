@@ -27,6 +27,10 @@ func init() {
 		return new(SaverFs)
 	}
 
+	_list["checker_fs"] = func() Model {
+		return new(CheckerFs)
+	}
+
 	_list["indexer_manhua_chapter"] = func() Model {
 		return new(IndexManhuaChapter)
 	}
@@ -39,7 +43,4 @@ func init() {
 		return new(CacherImage)
 	}
 
-	_list["checker_image"] = func() Model {
-		return new(CheckerImage)
-	}
 }
