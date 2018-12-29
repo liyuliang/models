@@ -4,7 +4,7 @@ package protobuf;
 message Saver_fs {
 
     uint64 Id = 1;
-    //@inject_tag: gorm:"index:code,code"
+    //@inject_tag: gorm:"not null;unique"
     string Code = 2;
     string Url = 3;
 }

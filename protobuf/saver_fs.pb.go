@@ -20,8 +20,8 @@ const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type SaverFs struct {
 	Id uint64 `protobuf:"varint,1,opt,name=Id,proto3" json:"Id,omitempty"`
-	// @inject_tag: gorm:"index:code,code"
-	Code                 string   `protobuf:"bytes,2,opt,name=Code,proto3" json:"Code,omitempty" gorm:"index:code,code"`
+	// @inject_tag: gorm:"not null;unique"
+	Code                 string   `protobuf:"bytes,2,opt,name=Code,proto3" json:"Code,omitempty" gorm:"not null;unique"`
 	Url                  string   `protobuf:"bytes,3,opt,name=Url,proto3" json:"Url,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
 	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
@@ -32,7 +32,7 @@ func (m *SaverFs) Reset()         { *m = SaverFs{} }
 func (m *SaverFs) String() string { return proto.CompactTextString(m) }
 func (*SaverFs) ProtoMessage()    {}
 func (*SaverFs) Descriptor() ([]byte, []int) {
-	return fileDescriptor_saver_fs_8bc1c3ef8919a00b, []int{0}
+	return fileDescriptor_saver_fs_9b5eb01f32a65b7a, []int{0}
 }
 func (m *SaverFs) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaverFs.Unmarshal(m, b)
@@ -77,9 +77,9 @@ func init() {
 	proto.RegisterType((*SaverFs)(nil), "protobuf.Saver_fs")
 }
 
-func init() { proto.RegisterFile("protobuf/saver_fs.proto", fileDescriptor_saver_fs_8bc1c3ef8919a00b) }
+func init() { proto.RegisterFile("protobuf/saver_fs.proto", fileDescriptor_saver_fs_9b5eb01f32a65b7a) }
 
-var fileDescriptor_saver_fs_8bc1c3ef8919a00b = []byte{
+var fileDescriptor_saver_fs_9b5eb01f32a65b7a = []byte{
 	// 107 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x12, 0x2f, 0x28, 0xca, 0x2f,
 	0xc9, 0x4f, 0x2a, 0x4d, 0xd3, 0x2f, 0x4e, 0x2c, 0x4b, 0x2d, 0x8a, 0x4f, 0x2b, 0xd6, 0x03, 0x8b,
