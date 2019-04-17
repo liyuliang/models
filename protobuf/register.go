@@ -31,6 +31,10 @@ func init() {
 		return new(CheckerFs)
 	}
 
+	_list["checker_manhua_chapter"] = func() Model {
+		return new(CheckerManhuaChapter)
+	}
+
 	_list["indexer_manhua_chapter"] = func() Model {
 		return new(IndexManhuaChapter)
 	}
