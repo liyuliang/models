@@ -3,6 +3,10 @@ package protobuf
 func init() {
 	_list = make(map[string]modelCreator)
 
+	_list["parser_job"] = func() Model {
+		return new(ParserJob)
+	}
+
 	_list["parser_manhua_page"] = func() Model {
 		return new(ParserManhuaPage)
 	}
@@ -46,5 +50,6 @@ func init() {
 	_list["cacher_image"] = func() Model {
 		return new(CacherImage)
 	}
+
 
 }
