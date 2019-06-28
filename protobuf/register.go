@@ -30,6 +30,9 @@ func init() {
 	_list["saver_fs"] = func() Model {
 		return new(SaverFs)
 	}
+	_list["saver_article"] = func() Model {
+		return new(SaverArticle)
+	}
 
 	_list["checker_fs"] = func() Model {
 		return new(CheckerFs)
