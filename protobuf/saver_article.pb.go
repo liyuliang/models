@@ -23,7 +23,7 @@ type SaverArticle struct {
 	// @inject_tag: gorm:"index:site,site_num"
 	Site string `protobuf:"bytes,2,opt,name=Site,proto3" json:"Site,omitempty" gorm:"index:site,site_num"`
 	// @inject_tag: gorm:"index:number,site_num"
-	Number     int32  `protobuf:"varint,3,opt,name=Number,proto3" json:"Number,omitempty" gorm:"index:number,site_num"`
+	Number     string `protobuf:"bytes,3,opt,name=Number,proto3" json:"Number,omitempty" gorm:"index:number,site_num"`
 	Title      string `protobuf:"bytes,4,opt,name=Title,proto3" json:"Title,omitempty"`
 	ZhTitle    string `protobuf:"bytes,5,opt,name=ZhTitle,proto3" json:"ZhTitle,omitempty"`
 	Url        string `protobuf:"bytes,6,opt,name=Url,proto3" json:"Url,omitempty"`
@@ -75,11 +75,11 @@ func (m *SaverArticle) GetSite() string {
 	return ""
 }
 
-func (m *SaverArticle) GetNumber() int32 {
+func (m *SaverArticle) GetNumber() string {
 	if m != nil {
 		return m.Number
 	}
-	return 0
+	return ""
 }
 
 func (m *SaverArticle) GetTitle() string {

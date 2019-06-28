@@ -8,7 +8,7 @@ message Saver_article {
     //@inject_tag: gorm:"index:site,site_num"
     string Site = 2;
     //@inject_tag: gorm:"index:number,site_num"
-    int32  Number = 3;
+    string  Number = 3;
 
     string Title = 4;
     string ZhTitle = 5;
