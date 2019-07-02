@@ -1,11 +1,8 @@
 package protobuf
 
 func init() {
-	_list = make(map[string]modelCreator)
 
-	_list["parser_job"] = func() Model {
-		return new(ParserJob)
-	}
+	_list = make(map[string]modelCreator)
 
 	_list["parser_manhua_page"] = func() Model {
 		return new(ParserManhuaPage)
@@ -13,6 +10,14 @@ func init() {
 
 	_list["parser_manhua_listing"] = func() Model {
 		return new(ParserManhuaListing)
+	}
+
+	_list["parser_article_listing"] = func() Model {
+		return new(ParserArticleListing)
+	}
+
+	_list["parser_article_page"] = func() Model {
+		return new(ParserArticlePage)
 	}
 
 	_list["saver_manhua_book"] = func() Model {
@@ -53,6 +58,5 @@ func init() {
 	_list["cacher_image"] = func() Model {
 		return new(CacherImage)
 	}
-
 
 }
