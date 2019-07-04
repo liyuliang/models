@@ -10,14 +10,20 @@ message Saver_article {
     //@inject_tag: gorm:"index:number,site_num"
     string  Number = 3;
 
-    string Title = 4;
-    string ZhTitle = 5;
-    string Url = 6;
+    string Face = 4;
+    string Title = 5;
+    //@inject_tag: gorm:"column:ZhTitle"
+    string ZhTitle = 6;
 
-    string Contents = 7;
-    string ZhContents = 8;
-    string Face = 9;
+    string Url = 7;
 
-    //@inject_tag: gorm:"column:UpdateTime"
-    int64 UpdateTime = 10;
+    string Contents = 8;
+    //@inject_tag: gorm:"column:ZhContents"
+    string ZhContents = 9;
+
+    string Tags = 10;
+    //@inject_tag: gorm:"column:ZhTags"
+    string ZhTags = 11;
+    //@inject_tag: gorm:"column:updatetime"
+    int64 UpdateTime = 12;
 }
