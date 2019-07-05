@@ -37,9 +37,12 @@ type SaverArticle struct {
 	ZhTags string `protobuf:"bytes,11,opt,name=ZhTags,proto3" json:"ZhTags,omitempty" gorm:"column:ZhTags"`
 	// @inject_tag: gorm:"column:updatetime"
 	UpdateTime           int64    `protobuf:"varint,12,opt,name=UpdateTime,proto3" json:"UpdateTime,omitempty" gorm:"column:updatetime"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	// @inject_tag: gorm:"-"
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	// @inject_tag: gorm:"-"
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	// @inject_tag: gorm:"-"
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *SaverArticle) Reset()         { *m = SaverArticle{} }
