@@ -24,14 +24,17 @@ type SaverArticle struct {
 	Site string `protobuf:"bytes,2,opt,name=Site,proto3" json:"Site,omitempty" gorm:"index:site,site_num"`
 	// @inject_tag: gorm:"index:number,site_num"
 	Number string `protobuf:"bytes,3,opt,name=Number,proto3" json:"Number,omitempty" gorm:"index:number,site_num"`
-	Face   string `protobuf:"bytes,4,opt,name=Face,proto3" json:"Face,omitempty"`
-	Title  string `protobuf:"bytes,5,opt,name=Title,proto3" json:"Title,omitempty"`
-	// @inject_tag: gorm:"column:ZhTitle"
-	ZhTitle  string `protobuf:"bytes,6,opt,name=ZhTitle,proto3" json:"ZhTitle,omitempty" gorm:"column:ZhTitle"`
-	Url      string `protobuf:"bytes,7,opt,name=Url,proto3" json:"Url,omitempty"`
-	Contents string `protobuf:"bytes,8,opt,name=Contents,proto3" json:"Contents,omitempty"`
-	// @inject_tag: gorm:"column:ZhContents"
-	ZhContents string `protobuf:"bytes,9,opt,name=ZhContents,proto3" json:"ZhContents,omitempty" gorm:"column:ZhContents"`
+	// @inject_tag: gorm:"type:text"
+	Face string `protobuf:"bytes,4,opt,name=Face,proto3" json:"Face,omitempty" gorm:"type:text"`
+	// @inject_tag: gorm:"type:text"
+	Title string `protobuf:"bytes,5,opt,name=Title,proto3" json:"Title,omitempty" gorm:"type:text"`
+	// @inject_tag: gorm:"column:ZhTitle;type:text"
+	ZhTitle string `protobuf:"bytes,6,opt,name=ZhTitle,proto3" json:"ZhTitle,omitempty" gorm:"column:ZhTitle;type:text"`
+	Url     string `protobuf:"bytes,7,opt,name=Url,proto3" json:"Url,omitempty"`
+	// @inject_tag: gorm:"type:text"
+	Contents string `protobuf:"bytes,8,opt,name=Contents,proto3" json:"Contents,omitempty" gorm:"type:text"`
+	// @inject_tag: gorm:"column:ZhContents;type:text"
+	ZhContents string `protobuf:"bytes,9,opt,name=ZhContents,proto3" json:"ZhContents,omitempty" gorm:"column:ZhContents;type:text"`
 	Tags       string `protobuf:"bytes,10,opt,name=Tags,proto3" json:"Tags,omitempty"`
 	// @inject_tag: gorm:"column:ZhTags"
 	ZhTags string `protobuf:"bytes,11,opt,name=ZhTags,proto3" json:"ZhTags,omitempty" gorm:"column:ZhTags"`
@@ -49,7 +52,7 @@ func (m *SaverArticle) Reset()         { *m = SaverArticle{} }
 func (m *SaverArticle) String() string { return proto.CompactTextString(m) }
 func (*SaverArticle) ProtoMessage()    {}
 func (*SaverArticle) Descriptor() ([]byte, []int) {
-	return fileDescriptor_saver_article_078bad2742ed8eb7, []int{0}
+	return fileDescriptor_saver_article_3623228dfa50cb64, []int{0}
 }
 func (m *SaverArticle) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaverArticle.Unmarshal(m, b)
@@ -158,10 +161,10 @@ func init() {
 }
 
 func init() {
-	proto.RegisterFile("protobuf/saver_article.proto", fileDescriptor_saver_article_078bad2742ed8eb7)
+	proto.RegisterFile("protobuf/saver_article.proto", fileDescriptor_saver_article_3623228dfa50cb64)
 }
 
-var fileDescriptor_saver_article_078bad2742ed8eb7 = []byte{
+var fileDescriptor_saver_article_3623228dfa50cb64 = []byte{
 	// 236 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x4c, 0x90, 0xcf, 0x4a, 0xc3, 0x40,
 	0x10, 0xc6, 0xc9, 0x26, 0x4d, 0xd3, 0xf1, 0x0f, 0x32, 0x88, 0x0c, 0x22, 0x12, 0x3c, 0xe5, 0xa4,

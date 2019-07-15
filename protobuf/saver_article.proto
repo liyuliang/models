@@ -10,15 +10,18 @@ message Saver_article {
     //@inject_tag: gorm:"index:number,site_num"
     string  Number = 3;
 
+    //@inject_tag: gorm:"type:text"
     string Face = 4;
+    //@inject_tag: gorm:"type:text"
     string Title = 5;
-    //@inject_tag: gorm:"column:ZhTitle"
+    //@inject_tag: gorm:"column:ZhTitle;type:text"
     string ZhTitle = 6;
 
     string Url = 7;
 
+    //@inject_tag: gorm:"type:text"
     string Contents = 8;
-    //@inject_tag: gorm:"column:ZhContents"
+    //@inject_tag: gorm:"column:ZhContents;type:text"
     string ZhContents = 9;
 
     string Tags = 10;
