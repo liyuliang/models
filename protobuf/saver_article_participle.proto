@@ -7,5 +7,5 @@ message Saver_article_participle {
     //@inject_tag: gorm:"index:word"
     string Word = 2;
     //@inject_tag: gorm:"index:aId"
-    int64 aid = 3;
+    uint64 aid = 3;
 }
