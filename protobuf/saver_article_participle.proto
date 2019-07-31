@@ -1,4 +1,4 @@
-syntax="proto3";
+syntax = "proto3";
 package protobuf;
 
 message Saver_article_participle {
@@ -8,4 +8,6 @@ message Saver_article_participle {
     string Word = 2;
     //@inject_tag: gorm:"index:aId"
     uint64 aid = 3;
+    //@inject_tag: gorm:"index:checked"
+    bool checked = 4;
 }
