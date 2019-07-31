@@ -48,6 +48,10 @@ func init() {
 		return new(SaverParticipleCount)
 	}
 
+	_list["saver_participle_group"] = func() Model {
+		return new(SaverParticipleGroup)
+	}
+
 	_list["checker_fs"] = func() Model {
 		return new(CheckerFs)
 	}

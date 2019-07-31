@@ -1,0 +1,12 @@
+syntax="proto3";
+package protobuf;
+
+message Saver_participle_group {
+
+    uint64 Id = 1;
+
+    //@inject_tag: gorm:"index:name"
+    string name = 2;
+
+    string Word = 3;
+}
