@@ -28,5 +28,5 @@ message Saver_article {
     //@inject_tag: gorm:"column:ZhTags"
     string ZhTags = 11;
     //@inject_tag: gorm:"column:updatetime"
-    int64 UpdateTime = 12;
+    string UpdateTime = 12;
 }
